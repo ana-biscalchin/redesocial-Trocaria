@@ -1,30 +1,31 @@
 let database = firebase.database();
 
-$(document).ready(function(){
+$(document).ready(function() {
   $(".btn-create").click(createUser);
 });
 
 function createUser(event) {
   event.preventDefault();
-  
+
   let name = $(".add-name").val();
   let email = $(".add-email").val();
   let password = $(".add-password").val();
   createUserFirebase(name, email, password);
-  // createProfile(name, email, password)
 }
 
 function createUserFirebase(name, email, password) {
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-  .then(function(response){
-    let userId = response.user.uid;
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then(function(response) {
+      let userId = response.user.uid;
 
-    addUserToDB(userId, name, email);
-    redirectPosts(userId);
-  })
-  .catch(function(error){
-    handleError(error);
-  });
+      addUserToDB(userId, name, email);
+      redirectPosts(userId);
+    })
+    .catch(function(error) {
+      handleError(error);
+    });
 }
 
 function addUserToDB(id, name, email) {

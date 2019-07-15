@@ -1,0 +1,24 @@
+{
+  "name": "redesocial-trocaria",
+  "version": "1.0.0",
+  "description": "Rede social de troca de produtos, objetos e serviços.",
+  "main": "eslint.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-plugin-react": "^7.14.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ana-biscalchin/redesocial-Trocaria.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ana-biscalchin/redesocial-Trocaria/issues"
+  },
+  "homepage": "https://github.com/ana-biscalchin/redesocial-Trocaria#readme"
+}
